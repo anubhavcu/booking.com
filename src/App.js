@@ -7,7 +7,7 @@ const App = () => {
       <Header />
       <main>
         <Container>
-          <h1>Booking.com</h1>
+          <h1>Book your home away from home!</h1>
         </Container>
       </main>
       <Footer />

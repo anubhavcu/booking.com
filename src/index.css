@@ -12,3 +12,10 @@ footer {
   width: 100%;
   text-align: center;
 }
+
+.customHover {
+  transition: transform 0.2s;
+}
+.customHover:hover {
+  transform: scale(1.3);
+}

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
 import Cities from './screens/Cities';
+import CityRooms from './screens/CityRooms';
 
 const App = () => {
   return (
@@ -13,9 +14,10 @@ const App = () => {
       <Header />
       <main className='py-3'>
         <Route path='/' component={HomeScreen} exact />
-        <Route path='/login' component={Login} exact />
-        <Route path='/signup' component={SignUp} exact />
+        <Route path='/login' component={Login} />
+        <Route path='/signup' component={SignUp} />
         <Route path='/selectcity' component={Cities} exact />
+        <Route path='/selectcity/:id' component={CityRooms} />
       </main>
       <Footer />
     </Router>

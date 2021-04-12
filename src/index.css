@@ -17,5 +17,5 @@ footer {
   transition: transform 0.2s;
 }
 .customHover:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }

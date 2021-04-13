@@ -1,17 +1,17 @@
-/* main {
+main {
   min-height: 85vh;
-} */
+}
 
 /* making footer to stay at bottom 
 https://www.w3schools.com/howto/howto_css_fixed_footer.asp
 */
-footer {
+/* footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
-}
+} */
 
 .customHover {
   transition: transform 0.2s;

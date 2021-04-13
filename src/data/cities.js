@@ -59,5 +59,10 @@ const cities = [
     name: 'Agra',
     state: 'Uttar Pradesh',
   },
+  {
+    id: '13',
+    name: 'Manali',
+    state: 'Himanchal Pradesh',
+  },
 ];
 export default cities;

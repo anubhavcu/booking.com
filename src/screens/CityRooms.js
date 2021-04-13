@@ -3,9 +3,9 @@ import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const CityRooms = ({ match }) => {
-  useEffect(() => {
-    console.log(match);
-  });
+  //   useEffect(() => {
+  //     console.log(match);
+  //   });
   return (
     <Container>
       <Link className='btn btn-dark my-3 customHover' to='/selectcity'>

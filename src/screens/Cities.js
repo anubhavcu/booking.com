@@ -2,34 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Card, Button, CardDeck, Container } from 'react-bootstrap';
 import CityCard from '../components/CityCard';
-// import cities from '../data/cities';
 import rooms from '../data/db.js';
 const Cities = () => {
   const [cityList, setCityList] = useState([]);
   useEffect(() => {
-    fetchCities();
+    // fetchCities();
     fetchFromData();
   }, []);
 
   const fetchFromData = async () => {
-    const cities = [];
     const res = await fetch(`http://localhost:5000/cities`);
     const data = await res.json();
     // console.log(data);
     setCityList(data);
   };
 
-  const fetchCities = () => {
-    // * for filtering an array of objects based on multiple props
-    // * https://stackoverflow.com/a/56757215
-
-    const uniqueCityList = rooms.filter(
-      (v, i, a) =>
-        a.findIndex((t) => t.city === v.city && t.state === v.state) === i
-    );
-    // console.log(uniqueCityList);
-    // setCityList(uniqueCityList);
-  };
   return (
     <Container>
       <Link className='btn btn-dark my-3 customHover' to='/'>
@@ -47,3 +34,15 @@ const Cities = () => {
 };
 
 export default Cities;
+
+//   const fetchCities = () => {
+//     // * for filtering an array of objects based on multiple props
+//     // * https://stackoverflow.com/a/56757215
+
+//     const uniqueCityList = rooms.filter(
+//       (v, i, a) =>
+//         a.findIndex((t) => t.city === v.city && t.state === v.state) === i
+//     );
+//     // console.log(uniqueCityList);
+//     // setCityList(uniqueCityList);
+//   };

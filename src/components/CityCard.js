@@ -4,8 +4,8 @@ import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const CityCard = ({ city }) => {
-  //   useEffect(() => {
-  //   }, []);
+  // useEffect(() => {
+  // }, []);
 
   return (
     <Container>

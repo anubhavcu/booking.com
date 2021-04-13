@@ -8,7 +8,17 @@ const Cities = () => {
   const [cityList, setCityList] = useState([]);
   useEffect(() => {
     fetchCities();
+    fetchFromData();
   }, []);
+
+  const fetchFromData = async () => {
+    const cities = [];
+    const res = await fetch(`http://localhost:5000/cities`);
+    const data = await res.json();
+    // console.log(data);
+    setCityList(data);
+  };
+
   const fetchCities = () => {
     // * for filtering an array of objects based on multiple props
     // * https://stackoverflow.com/a/56757215
@@ -18,7 +28,7 @@ const Cities = () => {
         a.findIndex((t) => t.city === v.city && t.state === v.state) === i
     );
     // console.log(uniqueCityList);
-    setCityList(uniqueCityList);
+    // setCityList(uniqueCityList);
   };
   return (
     <Container>

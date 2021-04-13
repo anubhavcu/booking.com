@@ -8,6 +8,7 @@ import SignUp from './screens/SignUp';
 import Cities from './screens/Cities';
 import CityRooms from './screens/CityRooms';
 import RoomInfo from './components/RoomInfo';
+import PaymentScreen from './screens/PaymentScreen';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/' component={HomeScreen} exact />
         <Route path='/login' component={Login} />
         <Route path='/signup' component={SignUp} />
+        <Route path='/payment' component={PaymentScreen} />
         <Route path='/selectcity' component={Cities} exact />
         <Route path='/selectcity/:id' component={CityRooms} exact />
         <Route path='/room/:city/:id' component={RoomInfo} />

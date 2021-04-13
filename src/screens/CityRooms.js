@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import rooms from '../data/db.js';
 import RoomCard from '../components/RoomCard';
@@ -25,12 +25,13 @@ const CityRooms = ({ match }) => {
       <Link className='btn btn-dark my-3 customHover' to='/selectcity'>
         Go Back
       </Link>
-      {/* <h1>{match.params.id} </h1> */}
-      {rooms.map((room) => (
-        // <h1>{room.name}</h1>
-        // <h1>Hello</h1>
-        <RoomCard room={room} />
-      ))}
+      <Row>
+        {rooms.map((room) => (
+          <Col>
+            <RoomCard room={room} />
+          </Col>
+        ))}
+      </Row>
     </Container>
   );
 };

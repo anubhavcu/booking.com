@@ -17,5 +17,10 @@ footer {
   transition: transform 0.2s;
 }
 .customHover:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
+}
+.image {
+  object-fit: 'cover';
+  height: 25vh;
+  width: 30vh;
 }

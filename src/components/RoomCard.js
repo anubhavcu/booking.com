@@ -12,9 +12,11 @@ const RoomCard = ({ room }) => {
   return (
     <Card className='my-3 p-3 rounded customHover'>
       <Card.Body>
-        <Card.Title as='div'>
-          <strong>{room.name}</strong>
-        </Card.Title>
+        <Link to={`/room/${room.id}`}>
+          <Card.Title as='div'>
+            <strong>{room.name}</strong>
+          </Card.Title>
+        </Link>
         <Card.Text as='div'></Card.Text>
         <Card.Text as='h3'>
           {room.rating} out of {room.numReviews}

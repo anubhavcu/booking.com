@@ -7,6 +7,7 @@ import Login from './screens/Login';
 import SignUp from './screens/SignUp';
 import Cities from './screens/Cities';
 import CityRooms from './screens/CityRooms';
+import RoomInfo from './components/RoomInfo';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         <Route path='/login' component={Login} />
         <Route path='/signup' component={SignUp} />
         <Route path='/selectcity' component={Cities} exact />
-        <Route path='/selectcity/:id' component={CityRooms} />
+        <Route path='/selectcity/:id' component={CityRooms} exact />
+        <Route path='/room/:id' component={RoomInfo} />
       </main>
       <Footer />
     </Router>

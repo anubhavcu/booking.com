@@ -13,11 +13,11 @@ const RoomCard = ({ room }) => {
 
   return (
     <Card className='my-3 p-3 rounded customHover'>
-      <Link to={`/product/${room.id}`}>
+      <Link to={`/room/${room.city}/${room.id}`}>
         <Card.Img src={image} variant='top' className='image' />
       </Link>
       <Card.Body>
-        <Link to={`/room/${room.id}`}>
+        <Link to={`/room/${room.city}/${room.id}`}>
           <Card.Title as='div'>
             <strong>{room.name}</strong>
           </Card.Title>

@@ -19,7 +19,7 @@ const App = () => {
         <Route path='/signup' component={SignUp} />
         <Route path='/selectcity' component={Cities} exact />
         <Route path='/selectcity/:id' component={CityRooms} exact />
-        <Route path='/room/:id' component={RoomInfo} />
+        <Route path='/room/:city/:id' component={RoomInfo} />
       </main>
       <Footer />
     </Router>

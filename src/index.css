@@ -22,5 +22,6 @@ footer {
 .image {
   object-fit: 'cover';
   height: 25vh;
-  width: 30vh;
+  width: 23vh;
+  border-radius: 55;
 }

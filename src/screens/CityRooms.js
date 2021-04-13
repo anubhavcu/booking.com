@@ -27,7 +27,7 @@ const CityRooms = ({ match }) => {
       </Link>
       <Row>
         {rooms.map((room) => (
-          <Col>
+          <Col sm={12} md={6} lg={4} xl={3}>
             <RoomCard room={room} />
           </Col>
         ))}

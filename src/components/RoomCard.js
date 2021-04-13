@@ -2,12 +2,13 @@ import { useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import image from '../mockImage.jpg';
+import Rating from './Rating';
 const RoomCard = ({ room }) => {
   useEffect(() => {
     fetchDetails();
   }, []);
   const fetchDetails = () => {
-    console.log(room);
+    // console.log(room);
   };
 
   return (
@@ -22,9 +23,9 @@ const RoomCard = ({ room }) => {
           </Card.Title>
         </Link>
         <Card.Text as='div'>
-          {room.rating} out of {room.numReviews}
+          <Rating value={room.rating} text={`${room.numReviews} reviews`} />
         </Card.Text>
-        <Card.Text as='h3'>
+        <Card.Text as='h5'>
           <ul>
             {room.facilities.map((item) => (
               <li>{item}</li>

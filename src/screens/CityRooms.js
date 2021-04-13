@@ -10,14 +10,14 @@ const CityRooms = ({ match }) => {
 
   useEffect(() => {
     fetchRooms();
-    console.log(match.params.id);
+    // console.log(match.params.id);
   }, [match]);
   const fetchRooms = async () => {
     setCity(match.params.id);
     const cityName = match.params.id.toLowerCase();
     const res = await fetch(`http://localhost:5000/${cityName}`);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     setRooms(data);
   };
   return (

@@ -21,7 +21,7 @@ const PaymentScreen = () => {
           </Form.Group>
           <Form.Group controlId='formBasicPassword'>
             <Form.Label>Age</Form.Label>
-            <Form.Control type='number' placeholder='enter age' />
+            <Form.Control type='number' placeholder='enter age' min={18} />
           </Form.Group>
           <Form.Group controlId='exampleForm.ControlSelect1'>
             <Form.Label>Government ID</Form.Label>

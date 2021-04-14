@@ -39,7 +39,9 @@ const PaymentWindow = () => {
             <Form.Label>Enter Upi ID : </Form.Label>
             <Form.Control type='text' placeholder='anubhav@upi.com' />
           </Form.Group>
-          <Button variant='primary'>Submit</Button>
+          <Link to='/success'>
+            <Button variant='primary'>Submit</Button>
+          </Link>
         </>
       )}
       {paymentMethod === 'Card' && (
@@ -56,7 +58,9 @@ const PaymentWindow = () => {
             <Form.Label>CVV : </Form.Label>
             <Form.Control type='text' placeholder='123' />
           </Form.Group>
-          <Button variant='primary'>Submit</Button>{' '}
+          <Link to='/success'>
+            <Button variant='primary'>Submit</Button>{' '}
+          </Link>
         </div>
       )}
     </Container>

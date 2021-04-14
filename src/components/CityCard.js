@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const CityCard = ({ city }) => {
-  // useEffect(() => {
-  // }, []);
-
   return (
     <Container>
       <Card className='my-3  rounded customHover'>

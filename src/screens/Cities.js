@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Row, Col, Card, Button, CardDeck, Container } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import CityCard from '../components/CityCard';
-import rooms from '../data/db.js';
+import loading from '../loader.gif';
 const Cities = () => {
   const [cityList, setCityList] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    // fetchCities();
     fetchFromData();
   }, []);
 
   const fetchFromData = async () => {
     const res = await fetch(`http://localhost:5000/cities`);
     const data = await res.json();
-    // console.log(data);
     setCityList(data);
+    setLoading(false);
   };
 
   return (
@@ -22,6 +22,12 @@ const Cities = () => {
       <Link className='btn btn-dark my-3 customHover' to='/'>
         Go Back
       </Link>
+      {isLoading === true && (
+        <div>
+          <h1>Loading...</h1>
+          <img src={loading} alt='loading'></img>
+        </div>
+      )}
       <Row>
         {cityList.map((city) => (
           <Col sm={12} md={6} lg={4} xl={3}>

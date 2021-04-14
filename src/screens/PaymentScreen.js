@@ -1,17 +1,18 @@
 import React from 'react';
-import { Button, Col, Container, Form, FormLabel } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FormContainer from '../components/FormContainer';
 
 const PaymentScreen = () => {
-  const setPaymentMethod = (e) => {
-    console.log(e);
+  const handleSubmit = () => {
+    // alert('done');
   };
+
   return (
     <div>
       <FormContainer>
-        <Link className='btn btn-dark my-3 customHover' to='/'>
-          Home
+        <Link className='btn btn-dark my-3 customHover' to='/selectcity'>
+          Back
         </Link>
         <Form.Group controlId='formBasicEmail'>
           <Form.Group controlId='formBasicPassword'>
@@ -21,6 +22,19 @@ const PaymentScreen = () => {
           <Form.Group controlId='formBasicPassword'>
             <Form.Label>Age</Form.Label>
             <Form.Control type='number' placeholder='enter age' />
+          </Form.Group>
+          <Form.Group controlId='exampleForm.ControlSelect1'>
+            <Form.Label>Government ID</Form.Label>
+            <Form.Text className='text-muted'>* Mandatory</Form.Text>
+            <Form.Control as='select'>
+              <option>Aadhar</option>
+              <option>Driving License</option>
+              <option>Passport</option>
+            </Form.Control>
+          </Form.Group>
+          <Form.Group controlId='formBasicPassword'>
+            <Form.Label>Govt. ID Number</Form.Label>
+            <Form.Control type='text' placeholder='Govt. ID Number' />
           </Form.Group>
           <Form.Group controlId='formBasicPassword'>
             <Form.Label>Phone Number</Form.Label>
@@ -50,29 +64,13 @@ const PaymentScreen = () => {
         </Form.Group>
 
         <Form>
-          <Form.Group>
-            <FormLabel as='legend'>Select Method</FormLabel>
-          </Form.Group>
-          <Col>
-            <Form.Check
-              type='radio'
-              label='Paytm UPI'
-              name='paymentMethod'
-              value='Paytm'
-              checked
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check>
-            <Form.Check
-              type='radio'
-              label='Debit or Credit Card'
-              name='paymentMethod'
-              value='Card'
-              checked
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check>
-          </Col>
-
-          <Button variant='primary'>Submit</Button>
+          {/* <Button variant='primary' onClick={handleSubmit}>
+            Next
+          </Button> */}
+          {/* using temporary link for now, should be a submit form  */}
+          <Link className='btn btn-dark my-3 customHover' to='/paymentwindow'>
+            Next
+          </Link>
         </Form>
       </FormContainer>
     </div>

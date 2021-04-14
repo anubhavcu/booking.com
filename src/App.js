@@ -9,6 +9,7 @@ import Cities from './screens/Cities';
 import CityRooms from './screens/CityRooms';
 import RoomInfo from './components/RoomInfo';
 import PaymentScreen from './screens/PaymentScreen';
+import PaymentWindow from './screens/PaymentWindow';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/selectcity' component={Cities} exact />
         <Route path='/selectcity/:id' component={CityRooms} exact />
         <Route path='/room/:city/:id' component={RoomInfo} />
+        <Route path='/paymentwindow' component={PaymentWindow} />
       </main>
       <Footer />
     </Router>

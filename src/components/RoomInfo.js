@@ -11,12 +11,13 @@ import {
 } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import image from '../mockImage.jpg';
+import loading from '../loader.gif';
 
 const RoomInfo = ({ match }) => {
   const [room, setRoom] = useState({});
   const [facilities, setFacilities] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    // console.log(match.params);
     fetchRoomDetails();
   }, [match]);
 
@@ -25,8 +26,7 @@ const RoomInfo = ({ match }) => {
       `http://localhost:5000/${match.params.city}/${match.params.id}`
     );
     const data = await res.json();
-    console.log(data);
-    console.log(data.facilities);
+    setLoading(false);
     setRoom(data);
     setFacilities(data.facilities);
   };
@@ -38,6 +38,12 @@ const RoomInfo = ({ match }) => {
       >
         Go Back
       </Link>
+      {isLoading === true && (
+        <div>
+          <h1>Loading...</h1>
+          <img src={loading} alt='loading'></img>
+        </div>
+      )}
       <Row>
         <Col md={6}>
           <Image src={image} alt={room.name} fluid />
@@ -50,8 +56,6 @@ const RoomInfo = ({ match }) => {
             <ListGroup.Item>
               <Rating value={room.rating} text={`${room.numReviews} reviews`} />
             </ListGroup.Item>
-            {/* <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-            <ListGroup.Item>Description : {product.description}</ListGroup.Item> */}
             {facilities.map((item) => (
               <ListGroup.Item>
                 <i className='fas fa-arrow-circle-right'></i> {item}

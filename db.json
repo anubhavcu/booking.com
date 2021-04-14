@@ -25,14 +25,16 @@
           {
             "id": "adf79ab9-aa8d-4bfc-a68a-243d467aaf39",
             "name": "Polly",
-            "contact": "1-238-458-7042 x16099",
-            "Paid": false
+            "contact": "19-93341145",
+            "Paid": false,
+            "verified": false
           },
           {
             "id": "07184bf4-42e5-413b-95e9-08875f8c8827",
             "name": "Wilma",
-            "contact": "(273) 209-1845 x24195",
-            "Paid": true
+            "contact": "(273) 209-1845 ",
+            "Paid": true,
+            "verified": true
           }
         ]
       },

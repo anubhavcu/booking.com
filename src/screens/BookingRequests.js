@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Container, Card } from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  Container,
+  Card,
+  Button,
+  ButtonGroup,
+} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import loading from '../loader.gif';
 
@@ -14,13 +21,11 @@ const BookingRequests = () => {
     const res = await data.json();
     const properties = await res.properties;
     const bookings = properties.filter((item) => item.bookingRequest > 0);
-    // const [requests] = bookings.bookingsReq;
-    const requests = bookings.map((item) => {
-      return item.bookingsReq > 0;
-    });
-    console.log(bookings);
-    // console.log(requests);
 
+    // console.log(bookings);
+    // bookings.map((item) => {
+    //   item.bookingsReq.map((i) => console.log(i));
+    // });
     setLoading(false);
     setRequests(bookings);
   };
@@ -39,22 +44,49 @@ const BookingRequests = () => {
         </div>
       )}
       <Row>
-        {requests.map((req) => (
-          <Col key={req.name} sm={12} md={6} lg={4} xl={3}>
-            <Card className='my-3 p-3 rounded '>
-              <Card.Body>
-                <Card.Title as='div'>
-                  <strong>{req.name}</strong>
-                </Card.Title>
-                <Card.Text as='div'></Card.Text>
-                <Card.Text as='h5'>
-                  <h5>{req.contact}</h5>
-                  <h5> Paid: {req.Paid === true ? 'yes' : 'No'}</h5>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+        {requests.map((item) =>
+          item.bookingsReq.map((req) => (
+            <Col key={req.name} sm={12} md={6} lg={4} xl={3}>
+              <Card className='my-3 p-3 rounded '>
+                <Card.Body>
+                  <Card.Title as='div'>
+                    <h4>Name: {req.name}</h4>
+                  </Card.Title>
+                  <Card.Text as='div'></Card.Text>
+                  <Card.Text as='h5'>
+                    <h5>Contact: {req.contact}</h5>
+                    <h5>
+                      {' '}
+                      Paid:{' '}
+                      {req.Paid === true ? (
+                        <i className='fas fa-check-circle'></i>
+                      ) : (
+                        <i className='fas fa-times'></i>
+                      )}
+                    </h5>
+                    <h5>
+                      {' '}
+                      Verified:{' '}
+                      {req.verified === true ? (
+                        <i className='fas fa-check-circle'></i>
+                      ) : (
+                        <i className='fas fa-times'></i>
+                      )}
+                    </h5>
+                    <ButtonGroup className='mr-2'>
+                      <Button variant='primary' className='mr-2 customHover'>
+                        Accept
+                      </Button>{' '}
+                      <Button variant='danger' className='customHover'>
+                        Reject
+                      </Button>{' '}
+                    </ButtonGroup>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))
+        )}
       </Row>
     </Container>
   );

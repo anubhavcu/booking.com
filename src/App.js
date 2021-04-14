@@ -1,8 +1,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Container, Button } from 'react-bootstrap';
 import HomeScreen from './screens/HomeScreen';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
 import Cities from './screens/Cities';

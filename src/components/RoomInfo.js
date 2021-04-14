@@ -56,8 +56,8 @@ const RoomInfo = ({ match }) => {
             <ListGroup.Item>
               <Rating value={room.rating} text={`${room.numReviews} reviews`} />
             </ListGroup.Item>
-            {facilities.map((item) => (
-              <ListGroup.Item>
+            {facilities.map((item, index) => (
+              <ListGroup.Item key={index}>
                 <i className='fas fa-arrow-circle-right'></i> {item}
               </ListGroup.Item>
             ))}
@@ -99,7 +99,7 @@ const RoomInfo = ({ match }) => {
                     type='button'
                     disabled={false}
                   >
-                    Book it Now!
+                    Request to Book
                   </Button>
                 </Link>
               </ListGroup.Item>

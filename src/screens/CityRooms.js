@@ -5,7 +5,7 @@ import RoomCard from '../components/RoomCard';
 import loading from '../loader.gif';
 
 const CityRooms = ({ match }) => {
-  const [city, setCity] = useState('');
+  // const [city, setCity] = useState('');
   const [rooms, setRooms] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ const CityRooms = ({ match }) => {
     fetchRooms();
   }, [match]);
   const fetchRooms = async () => {
-    setCity(match.params.id);
+    // setCity(match.params.id);
     const cityName = match.params.id.toLowerCase();
     const res = await fetch(`http://localhost:5000/${cityName}`);
     const data = await res.json();
@@ -33,7 +33,7 @@ const CityRooms = ({ match }) => {
       )}
       <Row>
         {rooms.map((room) => (
-          <Col sm={12} md={6} lg={4} xl={3}>
+          <Col key={room.name} sm={12} md={6} lg={4} xl={3}>
             <RoomCard room={room} />
           </Col>
         ))}

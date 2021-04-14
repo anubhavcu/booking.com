@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Rating = ({ value, text, color }) => {
-  // const { value, text } = props;
   return (
     <div className='rating'>
       <span>

@@ -1,4 +1,48 @@
 {
+  "profiles": {
+    "name": "Anubhav",
+    "phone": "(289) 623-6460",
+    "properties": [
+      {
+        "id": "ce0beb5f-873b-48e7-9256-9d74eb6eb350",
+        "propertyName": "BirdsSong Villa",
+        "facilities": [
+          "living room",
+          "tours and treks",
+          "free Parking",
+          "Free Wifi",
+          "breakfast",
+          "Doctor On Call"
+        ],
+        "coupleFriendly": true,
+        "city": "delhi",
+        "address": "295 Kling Centers",
+        "coordinate": "-18.8943,123.6163",
+        "rating": 4.2,
+        "numReviews": 35,
+        "bookingRequest": true
+      },
+      {
+        "id": "bb0a02ba-502b-43db-9cb6-d18db26e71e8",
+        "propertyName": "Amnesty Villa",
+        "facilities": [
+          "living room",
+          "free Parking",
+          "Free Wifi",
+          "breakfast",
+          "Doctor On Call"
+        ],
+        "coupleFriendly": true,
+        "city": "delhi",
+        "address": "295 Kling Centers",
+        "coordinate": "-18.8943,123.6163",
+        "rating": 3.9,
+        "numReviews": 41,
+        "bookingRequest": false
+      }
+    ]
+  },
+
   "delhi": [
     {
       "id": 1,

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Col, Form, FormLabel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import FormContainer from '../components/FormContainer';
 
 const PaymentWindow = () => {
   const [paymentMethod, setPaymentMethod] = useState('upi');
@@ -46,11 +45,11 @@ const PaymentWindow = () => {
       )}
       {paymentMethod === 'Card' && (
         <div>
-          <Form.Group controlId='formBasicPassword'>
+          <Form.Group controlId='formBasicText'>
             <Form.Label>Enter Card Number : </Form.Label>
             <Form.Control type='text' placeholder='2313-4322-1234' />
           </Form.Group>
-          <Form.Group controlId='formBasicPassword'>
+          <Form.Group controlId='formBasic'>
             <Form.Label>Exp. Date : </Form.Label>
             <Form.Control type='text' placeholder='mm/yyyy' />
           </Form.Group>

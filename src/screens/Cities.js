@@ -24,7 +24,7 @@ const Cities = () => {
     setLoading(false);
     setCityList(data);
 
-    console.log(data);
+    // console.log(data);
   };
 
   return (
@@ -41,7 +41,7 @@ const Cities = () => {
       )}
       <Row>
         {cityList.map((city) => (
-          <Col sm={12} md={6} lg={4} xl={3}>
+          <Col key={city.id} sm={12} md={6} lg={4} xl={3}>
             <CityCard city={city} />
           </Col>
         ))}

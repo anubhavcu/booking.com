@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 import FormContainer from '../components/FormContainer';
 
 const PaymentScreen = () => {
-  const handleSubmit = () => {
-    // alert('done');
-  };
-
   return (
     <div>
       <FormContainer>
@@ -15,11 +11,11 @@ const PaymentScreen = () => {
           Back
         </Link>
         <Form.Group controlId='formBasicEmail'>
-          <Form.Group controlId='formBasicPassword'>
+          <Form.Group controlId='formBasicName'>
             <Form.Label>Name</Form.Label>
             <Form.Control type='text' placeholder='enter name' />
           </Form.Group>
-          <Form.Group controlId='formBasicPassword'>
+          <Form.Group controlId='formBasicAge'>
             <Form.Label>Age</Form.Label>
             <Form.Control type='number' placeholder='enter age' min={18} />
           </Form.Group>
@@ -32,11 +28,11 @@ const PaymentScreen = () => {
               <option>Passport</option>
             </Form.Control>
           </Form.Group>
-          <Form.Group controlId='formBasicPassword'>
+          <Form.Group controlId='formBasicText'>
             <Form.Label>Govt. ID Number</Form.Label>
             <Form.Control type='text' placeholder='Govt. ID Number' />
           </Form.Group>
-          <Form.Group controlId='formBasicPassword'>
+          <Form.Group controlId='formBasicNumber'>
             <Form.Label>Phone Number</Form.Label>
             <Form.Control type='phone' placeholder='Phone Number' />
           </Form.Group>

@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+In project directory, run:  
+### `npm run dev`
+
+Will run json-server and react-development server at same time 
+
 In the project directory, you can run:
 
 ### `npm start`

@@ -1,9 +1,10 @@
 import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import background from '../background.jpg';
 
 const HomeScreen = () => {
   return (
-    <div>
+    <>
       <Container>
         <h1>Book your home away from home!</h1>
         <Link to='/selectcity'>
@@ -13,7 +14,7 @@ const HomeScreen = () => {
           <Button variant='outline-info'>List your property</Button>{' '}
         </Link>
       </Container>
-    </div>
+    </>
   );
 };
 

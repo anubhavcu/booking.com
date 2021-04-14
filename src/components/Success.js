@@ -7,7 +7,7 @@ const Success = () => {
   useEffect(() => {
     setTimeout(() => {
       window.location.href = '/';
-    }, 5000);
+    }, 3000);
   }, []);
   return (
     <Container>

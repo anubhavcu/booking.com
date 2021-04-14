@@ -11,6 +11,7 @@ import RoomInfo from './components/RoomInfo';
 import PaymentScreen from './screens/PaymentScreen';
 import PaymentWindow from './screens/PaymentWindow';
 import Success from './components/Success';
+import Profile from './screens/Profile';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/room/:city/:id' component={RoomInfo} />
         <Route path='/paymentwindow' component={PaymentWindow} />
         <Route path='/success' component={Success} />
+        <Route path='/profile' component={Profile} />
       </main>
       <Footer />
     </Router>

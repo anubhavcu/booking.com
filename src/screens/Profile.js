@@ -79,6 +79,21 @@ const Profile = () => {
             </Card>
           </Col>
         ))}
+        <Col>
+          <Card>
+            <Card.Body>
+              <Card.Text as='h5'>
+                <Link
+                  className='btn btn-dark my-3 customHover'
+                  to='/profile/upload'
+                >
+                  Add more.{' '}
+                  <i className='fa fa-plus-circle' aria-hidden='true'></i>
+                </Link>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
       </Row>
     </Container>
   );

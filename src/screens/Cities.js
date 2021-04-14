@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Container } from 'react-bootstrap';
 import CityCard from '../components/CityCard';
 import loading from '../loader.gif';
+import Search from '../components/Search';
 const Cities = () => {
   const [cityList, setCityList] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -17,11 +18,21 @@ const Cities = () => {
     setLoading(false);
   };
 
+  const searchingText = async (text) => {
+    const res = await fetch(`http://localhost:5000/cities?q=${text}`);
+    const data = await res.json();
+    setLoading(false);
+    setCityList(data);
+
+    console.log(data);
+  };
+
   return (
     <Container>
       <Link className='btn btn-dark my-3 customHover' to='/'>
         Go Back
       </Link>
+      <Search searchingText={searchingText} />
       {isLoading === true && (
         <div>
           <h1>Loading...</h1>

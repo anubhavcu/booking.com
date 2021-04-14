@@ -33,7 +33,7 @@ const CityRooms = ({ match }) => {
       )}
       <Row>
         {rooms.map((room) => (
-          <Col key={room.name} sm={12} md={6} lg={4} xl={3}>
+          <Col key={room.id} sm={12} md={6} lg={4} xl={3}>
             <RoomCard room={room} />
           </Col>
         ))}

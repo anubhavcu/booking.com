@@ -1,6 +1,8 @@
 //* we will fetch profile based on login from database, for now it is just dummy data
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Badge } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 import loading from '../loader.gif';
 import image from '../mockImage.jpg';
 import Rating from '../components/Rating';
@@ -20,10 +22,12 @@ const Profile = () => {
     setProfile(res);
     setProperties(res.properties);
     setLoading(false);
-    console.log(res);
   };
   return (
     <Container>
+      <Link className='btn btn-dark my-3 customHover' to='/'>
+        Home
+      </Link>
       <h1>Welcome {profile.name}</h1>
       <h3>Your listings :</h3>
       {isLoading === true && (
@@ -35,7 +39,7 @@ const Profile = () => {
       <Row>
         {properties.map((room) => (
           <Col key={room.name} sm={12} md={6} lg={4} xl={3}>
-            <Card className='my-3 p-3 rounded customHover'>
+            <Card className='my-3 p-3 rounded '>
               <Card.Img src={image} variant='top' className='image' />
               <Card.Body>
                 <Card.Title as='div'>
@@ -55,8 +59,21 @@ const Profile = () => {
                   </ul>
                 </Card.Text>
                 <h5>
-                  booking request :{' '}
-                  {room.bookingRequest ? <Button>View request</Button> : 'No'}
+                  booking requests:{' '}
+                  {room.bookingRequest ? (
+                    <Badge pill variant='info'>
+                      {room.bookingRequest}
+                    </Badge>
+                  ) : (
+                    ''
+                  )}
+                  {room.bookingRequest ? (
+                    <Link to='/profile/bookingrequests'>
+                      <Button className='customHover'>View requests </Button>
+                    </Link>
+                  ) : (
+                    'No'
+                  )}
                 </h5>
               </Card.Body>
             </Card>

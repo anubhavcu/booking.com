@@ -37,7 +37,7 @@ const SignUp = () => {
         </Form.Group>
 
         <Form.Label>Email address</Form.Label>
-        <Form.Control type='email' placeholder='Enter email' />
+        <Form.Control type='email' placeholder='johnwick@gmail.com' />
         <Form.Text className='text-muted'>
           We'll never share your email with anyone else.
         </Form.Text>
@@ -53,7 +53,7 @@ const SignUp = () => {
         Next
       </Button> */}
         {/* using temporary link for now, should be a submit form  */}
-        <Link className='btn btn-dark my-3 customHover' to='/profile'>
+        <Link className='btn btn-dark my-3 customHover' to='/profile/upload'>
           Sign Up
         </Link>
       </Form>

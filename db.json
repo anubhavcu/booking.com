@@ -20,7 +20,21 @@
         "coordinate": "-18.8943,123.6163",
         "rating": 4.2,
         "numReviews": 35,
-        "bookingRequest": true
+        "bookingRequest": 2,
+        "bookingsReq": [
+          {
+            "id": "adf79ab9-aa8d-4bfc-a68a-243d467aaf39",
+            "name": "Polly",
+            "contact": "1-238-458-7042 x16099",
+            "Paid": false
+          },
+          {
+            "id": "07184bf4-42e5-413b-95e9-08875f8c8827",
+            "name": "Wilma",
+            "contact": "(273) 209-1845 x24195",
+            "Paid": true
+          }
+        ]
       },
       {
         "id": "bb0a02ba-502b-43db-9cb6-d18db26e71e8",
@@ -38,7 +52,7 @@
         "coordinate": "-18.8943,123.6163",
         "rating": 3.9,
         "numReviews": 41,
-        "bookingRequest": false
+        "bookingRequest": 0
       }
     ]
   },
